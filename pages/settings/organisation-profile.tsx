@@ -192,10 +192,10 @@ export default function Settings() {
             </div>
 
             {/* Memory */}
-            <div className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200 cursor-default">
+            <Link href="/settings/memory" className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200">
               <Brain className="w-5 h-5 text-gray-600" />
               <Text size="md" className="text-gray-700">Memory</Text>
-            </div>
+            </Link>
           </VStack>
 
           {/* Sign Out Button */}

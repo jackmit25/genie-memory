@@ -7,36 +7,21 @@ import {
   ChevronRight, 
   Star, 
   Settings as SettingsIcon,
-  ArrowRight,
-  Grid3X3,
-  List,
-  Calendar,
-  FolderOpen,
-  Pencil,
-  FileUp,
-  Search as SearchIcon,
   Building2,
-  PenTool,
-  MessageSquare,
-  Lightbulb,
   LogOut,
   Edit3,
-  Trash2
+  Trash2,
+  MessageSquare,
+  Lightbulb
 } from 'lucide-react';
 import { 
   Box, 
   Flex, 
   VStack, 
-  HStack,
-  Container, 
   Button, 
   Heading, 
   Text,
-  Avatar,
   Link,
-  Divider,
-  CollapsiblePanel,
-  Input,
   Textarea,
 } from '@/genie-ui';
 import { useState } from 'react';
@@ -72,7 +57,7 @@ export default function Prompts() {
 
   const [editingText, setEditingText] = useState('');
 
-  const startEditing = (prompt: any) => {
+  const startEditing = (prompt: { id: number; text: string; isEditing: boolean }) => {
     setEditingText(prompt.text);
     setPrompts(prompts.map(p => 
       p.id === prompt.id ? { ...p, isEditing: true } : { ...p, isEditing: false }
@@ -162,7 +147,7 @@ export default function Prompts() {
                 <Plus className="w-3 h-3" />
               </Button>
             </Flex>
-            <VStack spacing={0.5}>
+            <VStack spacing={1}>
               {[
                 { name: "msa project", color: "blue" },
                 { name: "Mutual NDA project", color: "green" },
@@ -246,7 +231,7 @@ export default function Prompts() {
             <Box className="mt-auto">
               <Button 
                 variant="light" 
-                size="lg" 
+                size="md" 
                 className="w-full p-3 text-red-600 hover:text-red-700 hover:bg-red-50 border border-red-200"
               >
                 <LogOut className="w-5 h-5 mr-2" />
@@ -264,7 +249,7 @@ export default function Prompts() {
               Prompts
             </Heading>
             <Text size="lg" className="text-gray-600">
-              Your go-to prompts, saved by Genie. We'll remember the questions and instructions you use most often, so you can reuse them instantly without typing them out again.
+              Your go-to prompts, saved by Genie. We&apos;ll remember the questions and instructions you use most often, so you can reuse them instantly without typing them out again.
             </Text>
           </Box>
 
@@ -272,7 +257,7 @@ export default function Prompts() {
           <Box className="mb-6">
             <Button 
               variant="solid" 
-              size="lg" 
+              size="md" 
               onClick={addNewPrompt}
               className="bg-purple-600 hover:bg-purple-700"
             >

@@ -7,28 +7,23 @@ import {
   ChevronRight, 
   Star, 
   Settings,
+  Pencil,
   ArrowRight,
+  FileUp,
+  Search as SearchIcon,
   Grid3X3,
   List,
-  Calendar,
   FolderOpen,
-  Pencil,
-  FileUp,
-  Search as SearchIcon
+  Calendar
 } from 'lucide-react';
 import { 
   Box, 
   Flex, 
   VStack, 
-  HStack,
-  Container, 
   Button, 
   Heading, 
   Text,
-  Avatar,
-  Link,
-  Divider,
-  CollapsiblePanel,
+  Link
 } from '@/genie-ui';
 
 export default function Home() {
@@ -89,7 +84,7 @@ export default function Home() {
                 <Plus className="w-3 h-3" />
               </Button>
             </Flex>
-            <VStack spacing={0.5}>
+            <VStack spacing={1}>
               {[
                 { name: "msa project", color: "blue" },
                 { name: "Mutual NDA project", color: "green" },
@@ -139,7 +134,7 @@ export default function Home() {
           {/* Hero Section */}
           <Box className="mb-12">
             <Heading as="h1" size="3xl" className="text-gray-900 font-bold mb-8">
-              Speed up your work with the world's most advanced legal AI
+              Speed up your work with the world&apos;s most advanced legal AI
             </Heading>
           </Box>
 
@@ -163,7 +158,7 @@ export default function Home() {
                     <Text size="md" className="text-gray-600">✓ Draft for any jurisdiction</Text>
                     <Text size="md" className="text-gray-600">✓ Get a complete document in 5-10 minutes</Text>
                   </VStack>
-                  <Button variant="light" size="lg" className="p-2 mt-auto">
+                  <Button variant="light" size="md" className="p-2 mt-auto">
                     <ArrowRight className="w-6 h-6" />
                   </Button>
                 </VStack>
@@ -187,7 +182,7 @@ export default function Home() {
                     <Text size="md" className="text-gray-600">✓ Amend any clause with AI</Text>
                     <Text size="md" className="text-gray-600">✓ Ask AI to explain any clause</Text>
                   </VStack>
-                  <Button variant="light" size="lg" className="p-2 mt-auto">
+                  <Button variant="light" size="md" className="p-2 mt-auto">
                     <ArrowRight className="w-6 h-6" />
                   </Button>
                 </VStack>
@@ -206,10 +201,10 @@ export default function Home() {
                     Search the template library
                   </Heading>
                   <VStack align="start" spacing={1}>
-                    <Text size="md" className="text-gray-600">✓ Search Genie's 500+ high-quality legal templates</Text>
+                    <Text size="md" className="text-gray-600">✓ Search Genie&apos;s 500+ high-quality legal templates</Text>
                     <Text size="md" className="text-gray-600">✓ Create your own private template library</Text>
                   </VStack>
-                  <Button variant="light" size="lg" className="p-2 mt-auto">
+                  <Button variant="light" size="md" className="p-2 mt-auto">
                     <ArrowRight className="w-6 h-6" />
                   </Button>
                 </VStack>

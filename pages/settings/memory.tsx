@@ -8,50 +8,33 @@ import {
   ChevronRight,
   Star,
   Settings as SettingsIcon,
-  ArrowRight,
-  Grid3X3,
-  List,
-  Calendar,
-  FolderOpen,
-  Pencil,
-  FileUp,
-  Search as SearchIcon,
   Building2,
-  PenTool,
-  MessageSquare,
-  Lightbulb,
   LogOut,
   Users,
   CreditCard,
   Gift,
   Brain,
   Share2,
-  Download,
   ChevronDown,
   Trash2,
   ArrowUpDown,
   File,
   BookOpen,
   Layout,
-  Settings
+  Settings,
+  Search as SearchIcon
 } from 'lucide-react';
 import {
   Box,
   Flex,
   VStack,
-  HStack,
-  Container,
   Button,
   Heading,
   Text,
-  Avatar,
   Link,
-  Divider,
-  CollapsiblePanel,
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Switch,
 } from '@/genie-ui';
 
 export default function Memory() {
@@ -116,7 +99,7 @@ export default function Memory() {
                 <Plus className="w-3 h-3" />
               </Button>
             </Flex>
-            <VStack spacing={0.5}>
+            <VStack spacing={1}>
               {[
                 { name: "msa project", color: "blue" },
                 { name: "Mutual NDA project", color: "green" },
@@ -212,7 +195,7 @@ export default function Memory() {
           <Box className="mt-auto">
             <Button
               variant="light"
-              size="lg"
+              size="md"
               className="w-full justify-start text-gray-700 hover:text-red-600 hover:bg-red-50"
             >
               <LogOut className="w-4 h-4 mr-2" />
@@ -472,7 +455,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The customer-facing brand name is 'SwiftSupply'.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The customer-facing brand name is &apos;SwiftSupply&apos;.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-13 • Last used: 2024-01-18</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Flex className="flex-wrap gap-2">
@@ -534,7 +517,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's registered address is 14 Old Street, London, EC1V 9HQ, United Kingdom.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s registered address is 14 Old Street, London, EC1V 9HQ, United Kingdom.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-11 • Last used: 2024-01-16</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -560,7 +543,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's governing law and jurisdiction is England & Wales.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s governing law and jurisdiction is England & Wales.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-10 • Last used: 2024-01-15</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -586,7 +569,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's risk appetite is medium, conservative on liability & indemnities but flexible on commercial terms.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s risk appetite is medium, conservative on liability & indemnities but flexible on commercial terms.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-09 • Last used: 2024-01-14</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -638,7 +621,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's default currency is GBP (£).</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s default currency is GBP (£).</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-07 • Last used: 2024-01-12</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -664,7 +647,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's preferred contract language is English (with German translation on request).</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s preferred contract language is English (with German translation on request).</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-06 • Last used: 2024-01-11</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -690,7 +673,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's standard contract length is 2-year fixed term, auto-renewing annually thereafter.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s standard contract length is 2-year fixed term, auto-renewing annually thereafter.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-05 • Last used: 2024-01-10</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -716,7 +699,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's signature authority format requires two directors or one director + company secretary.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s signature authority format requires two directors or one director + company secretary.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-04 • Last used: 2024-01-09</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -742,7 +725,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's corporate structure includes parent: SwiftSupply Holdings Ltd (UK), subsidiary: SwiftSupply GmbH (Germany).</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s corporate structure includes parent: SwiftSupply Holdings Ltd (UK), subsidiary: SwiftSupply GmbH (Germany).</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-03 • Last used: 2024-01-08</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
@@ -768,7 +751,7 @@ export default function Memory() {
                   <Box className="w-full p-4 bg-white border border-gray-200 rounded-lg">
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
-                        <Text size="md" className="text-gray-900 mb-1">The company's website is https://www.swiftsupply.com.</Text>
+                        <Text size="md" className="text-gray-900 mb-1">The company&apos;s website is https://www.swiftsupply.com.</Text>
                         <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-02 • Last used: 2024-01-07</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button

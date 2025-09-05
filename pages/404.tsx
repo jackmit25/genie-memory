@@ -9,11 +9,11 @@ export default function Custom404() {
           404 - Page Not Found
         </Heading>
         <Text size="lg" className="text-gray-600 mb-6">
-          The page you're looking for doesn't exist.
+          The page you&apos;re looking for doesn&apos;t exist.
         </Text>
         <Button 
           variant="solid" 
-          size="lg" 
+          size="md" 
           onClick={() => window.location.href = '/'}
         >
           <Home className="w-5 h-5 mr-2" />

@@ -8,40 +8,23 @@ import {
   ChevronRight,
   Star,
   Settings as SettingsIcon,
-  ArrowRight,
-  Grid3X3,
-  List,
-  Calendar,
-  FolderOpen,
-  Pencil,
-  FileUp,
-  Search as SearchIcon,
   Building2,
-  PenTool,
-  MessageSquare,
-  Lightbulb,
   LogOut,
   Users,
   CreditCard,
   Gift,
   Brain,
   Share2,
-  Download,
   ChevronDown
 } from 'lucide-react';
 import {
   Box,
   Flex,
   VStack,
-  HStack,
-  Container,
   Button,
   Heading,
   Text,
-  Avatar,
   Link,
-  Divider,
-  CollapsiblePanel,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -106,7 +89,7 @@ export default function Settings() {
                 <Plus className="w-3 h-3" />
               </Button>
             </Flex>
-            <VStack spacing={0.5}>
+            <VStack spacing={1}>
               {[
                 { name: "msa project", color: "blue" },
                 { name: "Mutual NDA project", color: "green" },
@@ -202,7 +185,7 @@ export default function Settings() {
           <Box className="mt-auto">
             <Button
               variant="light"
-              size="lg"
+              size="md"
               className="w-full justify-start text-gray-700 hover:text-red-600 hover:bg-red-50"
             >
               <LogOut className="w-4 h-4 mr-2" />

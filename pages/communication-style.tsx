@@ -7,34 +7,21 @@ import {
   ChevronRight,
   Star,
   Settings as SettingsIcon,
-  ArrowRight,
-  Grid3X3,
-  List,
-  Calendar,
-  FolderOpen,
-  Pencil,
-  FileUp,
-  Search as SearchIcon,
   Building2,
+  LogOut,
+  Target,
   PenTool,
   MessageSquare,
-  Lightbulb,
-  LogOut,
-  Target
+  Lightbulb
 } from 'lucide-react';
 import {
   Box,
   Flex,
   VStack,
-  HStack,
-  Container,
   Button,
   Heading,
   Text,
-  Avatar,
-  Link,
-  Divider,
-  CollapsiblePanel,
+  Link
 } from '@/genie-ui';
 import { useState } from 'react';
 
@@ -107,7 +94,7 @@ export default function CommunicationStyle() {
                 <Plus className="w-3 h-3" />
               </Button>
             </Flex>
-            <VStack spacing={0.5}>
+            <VStack spacing={1}>
               {[
                 { name: "msa project", color: "blue" },
                 { name: "Mutual NDA project", color: "green" },
@@ -192,7 +179,7 @@ export default function CommunicationStyle() {
             <Box className="mt-auto">
               <Button
                 variant="light"
-                size="lg"
+                size="md"
                 className="w-full p-3 text-red-600 hover:text-red-700 hover:bg-red-50 border border-red-200"
               >
                 <LogOut className="w-5 h-5 mr-2" />

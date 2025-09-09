@@ -60,6 +60,12 @@ export default function Memory() {
             <Text size="sm">Home</Text>
           </Link>
 
+          {/* Memory Link */}
+          <Link href="/settings/memory" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 mb-3">
+            <Brain className="w-4 h-4" />
+            <Text size="sm">Memory</Text>
+          </Link>
+
           {/* Start with Section */}
           <Box className="mb-4">
             <Text size="xs" className="text-gray-500 font-medium mb-2">Start with</Text>
@@ -144,65 +150,6 @@ export default function Memory() {
           </Link>
         </Box>
 
-        {/* Settings Sidebar */}
-        <Box className="w-64 bg-white border-r border-gray-200 p-6 flex flex-col">
-          <Box className="w-full">
-            <Heading as="h2" size="lg" className="text-gray-900 font-semibold">
-              Settings and preferences
-            </Heading>
-          </Box>
-
-          {/* Settings Navigation Items */}
-          <VStack spacing={2} className="flex-1">
-            {/* Organisation profile */}
-            <Link href="/settings/organisation-profile" className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200">
-              <Building2 className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Organisation profile</Text>
-            </Link>
-
-            {/* Organisation members */}
-            <div className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200 cursor-default">
-              <Users className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Organisation members</Text>
-            </div>
-
-            {/* Pricing plans */}
-            <div className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200 cursor-default">
-              <CreditCard className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Pricing plans</Text>
-            </div>
-
-            {/* Refer friends */}
-            <div className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200 cursor-default">
-              <Gift className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Refer friends</Text>
-            </div>
-
-            {/* Billing */}
-            <div className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200 cursor-default">
-              <CreditCard className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Billing</Text>
-            </div>
-
-            {/* Memory */}
-            <Link href="/settings/memory" className="flex items-center space-x-3 w-full p-3 rounded-lg bg-white shadow-sm border border-purple-200">
-              <Brain className="w-5 h-5 text-purple-600" />
-              <Text size="md" className="text-purple-700 font-medium">Memory</Text>
-            </Link>
-          </VStack>
-
-          {/* Sign Out Button */}
-          <Box className="mt-auto">
-            <Button
-              variant="light"
-              size="md"
-              className="w-full justify-start text-gray-700 hover:text-red-600 hover:bg-red-50"
-            >
-              <LogOut className="w-4 h-4 mr-2" />
-              Sign Out
-            </Button>
-          </Box>
-        </Box>
 
         {/* Main Content Area */}
         <Box className="flex-1 p-8 bg-gray-50 overflow-y-auto h-screen">
@@ -317,6 +264,23 @@ export default function Memory() {
                     </Box>
                   </Flex>
 
+                  {/* Add Memory Input Field */}
+                  <Box className="w-full mb-0 mt-12">
+                    <Text size="lg" className="text-gray-900 font-semibold mb-4">Add a new memory</Text>
+                    <VStack spacing={3} className="w-full">
+                      <textarea
+                        placeholder="Enter your memory here..."
+                        rows={3}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                      />
+                      <Flex className="justify-end w-full">
+                        <Button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium">
+                          Save
+                        </Button>
+                      </Flex>
+                    </VStack>
+                  </Box>
+
                   {/* Organisational Memory Content */}
                   <VStack spacing={8} className="w-full">
                     {/* Memories to Address Section */}
@@ -328,7 +292,7 @@ export default function Memory() {
                           <Flex className="justify-between items-start">
                             <Box className="flex-1">
                               <Text size="md" className="text-gray-900 mb-1">The company recently updated its data retention policy to 7 years for financial records.</Text>
-                              <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-22</Text>
+                              <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-22</Text>
                               <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                               <Button
                                 variant="light"
@@ -363,7 +327,7 @@ export default function Memory() {
                           <Flex className="justify-between items-start">
                             <Box className="flex-1">
                               <Text size="md" className="text-gray-900 mb-1">The company now offers 24/7 customer support during peak seasons.</Text>
-                              <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-21</Text>
+                              <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-21</Text>
                               <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                               <Button
                                 variant="light"
@@ -404,7 +368,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The business name is SwiftSupply Ltd.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-15 • Last used: 2024-01-20</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-15 • Last used: 2024-01-20</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -430,7 +394,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company is a Private Limited Company (Ltd) registered in England & Wales.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-14 • Last used: 2024-01-19</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-14 • Last used: 2024-01-19</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -456,7 +420,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The customer-facing brand name is &apos;SwiftSupply&apos;.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-13 • Last used: 2024-01-18</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-13 • Last used: 2024-01-18</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Flex className="flex-wrap gap-2">
                           <Button
@@ -492,7 +456,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company operates in the B2B SaaS sector, providing a supply chain management platform.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-12 • Last used: 2024-01-17</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-12 • Last used: 2024-01-17</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -518,7 +482,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s registered address is 14 Old Street, London, EC1V 9HQ, United Kingdom.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-11 • Last used: 2024-01-16</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-11 • Last used: 2024-01-16</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -544,7 +508,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s governing law and jurisdiction is England & Wales.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-10 • Last used: 2024-01-15</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-10 • Last used: 2024-01-15</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -570,7 +534,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s risk appetite is medium, conservative on liability & indemnities but flexible on commercial terms.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-09 • Last used: 2024-01-14</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-09 • Last used: 2024-01-14</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -596,7 +560,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company is subject to FCA (for financial data handling) and ICO (for GDPR compliance) regulations.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-08 • Last used: 2024-01-13</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-08 • Last used: 2024-01-13</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -622,7 +586,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s default currency is GBP (£).</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-07 • Last used: 2024-01-12</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-07 • Last used: 2024-01-12</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -648,7 +612,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s preferred contract language is English (with German translation on request).</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-06 • Last used: 2024-01-11</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-06 • Last used: 2024-01-11</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -674,7 +638,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s standard contract length is 2-year fixed term, auto-renewing annually thereafter.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-05 • Last used: 2024-01-10</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-05 • Last used: 2024-01-10</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -700,7 +664,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s signature authority format requires two directors or one director + company secretary.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-04 • Last used: 2024-01-09</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-04 • Last used: 2024-01-09</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -726,7 +690,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s corporate structure includes parent: SwiftSupply Holdings Ltd (UK), subsidiary: SwiftSupply GmbH (Germany).</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-03 • Last used: 2024-01-08</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-03 • Last used: 2024-01-08</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -752,7 +716,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company&apos;s website is https://www.swiftsupply.com.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-02 • Last used: 2024-01-07</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-02 • Last used: 2024-01-07</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -778,7 +742,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company follows GDPR compliance standards for data handling.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-21 • Last used: 2024-01-22</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-21 • Last used: 2024-01-22</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -804,7 +768,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Customer onboarding process takes 3-5 business days.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-20 • Last used: 2024-01-21</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-20 • Last used: 2024-01-21</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -830,7 +794,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">The company uses a 2-year contract term with annual auto-renewal.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-19 • Last used: 2024-01-20</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-19 • Last used: 2024-01-20</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Flex className="flex-wrap gap-2">
                           <Button
@@ -913,6 +877,23 @@ export default function Memory() {
                     </Box>
                   </Flex>
 
+                  {/* Add Memory Input Field */}
+                  <Box className="w-full mb-0 mt-12">
+                    <Text size="lg" className="text-gray-900 font-semibold mb-4">Add a new memory</Text>
+                    <VStack spacing={3} className="w-full">
+                      <textarea
+                        placeholder="Enter your memory here..."
+                        rows={3}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                      />
+                      <Flex className="justify-end w-full">
+                        <Button className="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium">
+                          Save
+                        </Button>
+                      </Flex>
+                    </VStack>
+                  </Box>
+
                   {/* Personal Memory Content */}
                   <VStack spacing={8} className="w-full">
                     {/* Memories to Address Section */}
@@ -924,7 +905,7 @@ export default function Memory() {
                           <Flex className="justify-between items-start">
                             <Box className="flex-1">
                               <Text size="md" className="text-gray-900 mb-1">User prefers to receive weekly summary emails instead of daily notifications.</Text>
-                              <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-22</Text>
+                              <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-22</Text>
                               <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                               <Button
                                 variant="light"
@@ -965,7 +946,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Prefers concise, professional communication style in all interactions.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-12 • Last used: 2024-01-17</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-12 • Last used: 2024-01-17</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -991,7 +972,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Likes to receive step-by-step instructions with clear action items.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-11 • Last used: 2024-01-16</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-11 • Last used: 2024-01-16</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -1017,7 +998,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Prefers morning notifications and updates rather than evening communications.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-10 • Last used: 2024-01-15</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-10 • Last used: 2024-01-15</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -1043,7 +1024,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Enjoys visual aids and diagrams when explaining complex concepts.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-09 • Last used: 2024-01-14</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-09 • Last used: 2024-01-14</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -1069,7 +1050,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Prefers bullet points and numbered lists for organizing information.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-08 • Last used: 2024-01-13</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-08 • Last used: 2024-01-13</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -1095,7 +1076,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Likes to be asked for confirmation before making significant changes.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-07 • Last used: 2024-01-12</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-07 • Last used: 2024-01-12</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Button
                           variant="light"
@@ -1121,7 +1102,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Prefers email summaries of important decisions and action items.</Text>
-                        <Text size="sm" className="text-gray-500">Last updated: 2024-01-06 • Last used: 2024-01-11</Text>
+                        <Text size="sm" className="text-gray-500">Added: 2024-01-06 • Last used: 2024-01-11</Text>
                       </Box>
                       <Button
                         variant="light"
@@ -1138,7 +1119,7 @@ export default function Memory() {
                     <Flex className="justify-between items-start">
                       <Box className="flex-1">
                         <Text size="md" className="text-gray-900 mb-1">Enjoys proactive suggestions and recommendations based on past preferences.</Text>
-                        <Text size="sm" className="text-gray-500 mb-2">Last updated: 2024-01-05 • Last used: 2024-01-10</Text>
+                        <Text size="sm" className="text-gray-500 mb-2">Added: 2024-01-05 • Last used: 2024-01-10</Text>
                         <Text size="xs" className="text-gray-400 mb-2">Source:</Text>
                         <Flex className="flex-wrap gap-2">
                           <Button

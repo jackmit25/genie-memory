@@ -14,7 +14,8 @@ import {
   Grid3X3,
   List,
   FolderOpen,
-  Calendar
+  Calendar,
+  Brain
 } from 'lucide-react';
 import { 
   Box, 
@@ -43,6 +44,12 @@ export default function Home() {
           <Link href="#" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 mb-3">
             <HomeIcon className="w-4 h-4" />
             <Text size="sm">Home</Text>
+          </Link>
+
+          {/* Memory Link */}
+          <Link href="/settings/memory" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 mb-3">
+            <Brain className="w-4 h-4" />
+            <Text size="sm">Memory</Text>
           </Link>
 
           {/* Start with Section */}

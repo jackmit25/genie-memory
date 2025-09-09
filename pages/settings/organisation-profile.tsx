@@ -50,6 +50,12 @@ export default function Settings() {
             <Text size="sm">Home</Text>
           </Link>
 
+          {/* Memory Link */}
+          <Link href="/settings/memory" className="flex items-center space-x-2 text-gray-700 hover:text-purple-600 mb-3">
+            <Brain className="w-4 h-4" />
+            <Text size="sm">Memory</Text>
+          </Link>
+
           {/* Start with Section */}
           <Box className="mb-4">
             <Text size="xs" className="text-gray-500 font-medium mb-2">Start with</Text>
@@ -174,11 +180,6 @@ export default function Settings() {
               <Text size="md" className="text-gray-700">Billing</Text>
             </div>
 
-            {/* Memory */}
-            <Link href="/settings/memory" className="flex items-center space-x-3 w-full p-3 rounded-lg hover:bg-white hover:shadow-sm border border-transparent hover:border-gray-200">
-              <Brain className="w-5 h-5 text-gray-600" />
-              <Text size="md" className="text-gray-700">Memory</Text>
-            </Link>
           </VStack>
 
           {/* Sign Out Button */}
@@ -478,6 +479,31 @@ export default function Settings() {
                     <option>Board resolution required</option>
                     <option>Custom authority structure</option>
                   </select>
+                </Box>
+              </VStack>
+            </Box>
+
+            {/* Additional Business Context Section */}
+            <Box className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 w-full">
+              <Box className="flex items-center justify-between mb-4">
+                <Heading as="h2" size="xl" className="text-gray-900 font-semibold">
+                  Additional Business Context
+                </Heading>
+                <Button
+                  variant="light"
+                  size="sm"
+                  className="text-purple-600 hover:text-purple-700 hover:bg-purple-50"
+                >
+                  Edit
+                </Button>
+              </Box>
+              <VStack spacing={4} className="w-full">
+                <Box className="w-full">
+                  <textarea
+                    placeholder="Enter any additional information about your business, industry, processes, or other relevant context..."
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
+                  />
                 </Box>
               </VStack>
             </Box>

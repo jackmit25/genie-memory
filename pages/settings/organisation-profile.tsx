@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Home,
   FileText,
@@ -32,6 +32,21 @@ import {
 } from '@/genie-ui';
 
 export default function Settings() {
+  const [showRegulatoryDropdown, setShowRegulatoryDropdown] = useState(false);
+  const [selectedRegulatoryBodies, setSelectedRegulatoryBodies] = useState<string[]>(['FCA', 'ICO']);
+  
+  const regulatoryBodies = [
+    'FCA',
+    'ICO', 
+    'SEC',
+    'GDPR',
+    'HIPAA',
+    'ISO 27001',
+    'FCA (for financial data handling)',
+    'ICO (for GDPR compliance)',
+    'Other'
+  ];
+
   return (
     <Box className="min-h-screen bg-white">
       <Flex className="min-h-screen">
@@ -294,6 +309,23 @@ export default function Settings() {
                     />
                   </Box>
                   <Box className="flex-1">
+                    <Text size="sm" className="text-gray-700 font-medium mb-2">Entity type</Text>
+                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                      <option selected>Private Limited Company (Ltd)</option>
+                      <option>Public Limited Company (PLC)</option>
+                      <option>Limited Liability Partnership (LLP)</option>
+                      <option>Partnership</option>
+                      <option>Sole Trader</option>
+                      <option>Corporation (US)</option>
+                      <option>LLC (US)</option>
+                      <option>GmbH (Germany)</option>
+                      <option>SARL (France)</option>
+                      <option>Other</option>
+                    </select>
+                  </Box>
+                </Flex>
+                <Flex className="w-full space-x-4">
+                  <Box className="flex-1">
                     <Text size="sm" className="text-gray-700 font-medium mb-2">Sector / industry</Text>
                     <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                       <option>Supply Chain & Logistics</option>
@@ -310,8 +342,6 @@ export default function Settings() {
                       <option>Other</option>
                     </select>
                   </Box>
-                </Flex>
-                <Flex className="w-full space-x-4">
                   <Box className="flex-1">
                     <Text size="sm" className="text-gray-700 font-medium mb-2">Website</Text>
                     <input
@@ -320,15 +350,15 @@ export default function Settings() {
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
                   </Box>
-                  <Box className="flex-1">
-                    <Text size="sm" className="text-gray-700 font-medium mb-2">Corporate structure basics</Text>
-                    <input
-                      type="text"
-                      defaultValue="Parent: SwiftSupply Holdings Ltd (UK), Subsidiary: SwiftSupply GmbH (Germany)"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    />
-                  </Box>
                 </Flex>
+                <Box className="w-full">
+                  <Text size="sm" className="text-gray-700 font-medium mb-2">Corporate structure basics</Text>
+                  <input
+                    type="text"
+                    defaultValue="Parent: SwiftSupply Holdings Ltd (UK), Subsidiary: SwiftSupply GmbH (Germany)"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </Box>
               </VStack>
             </Box>
 
@@ -373,37 +403,67 @@ export default function Settings() {
                     />
                   </Box>
                 </Flex>
-                <Flex className="w-full space-x-4">
-                  <Box className="flex-1">
-                    <Text size="sm" className="text-gray-700 font-medium mb-2">Regulatory / governing bodies (if relevant)</Text>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option selected>FCA (for financial data handling), ICO (for GDPR compliance)</option>
-                      <option>FCA</option>
-                      <option>ICO</option>
-                      <option>SEC</option>
-                      <option>GDPR</option>
-                      <option>HIPAA</option>
-                      <option>ISO 27001</option>
-                      <option>Other</option>
-                    </select>
-                  </Box>
-                  <Box className="flex-1">
-                    <Text size="sm" className="text-gray-700 font-medium mb-2">Risk appetite</Text>
-                    <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option>Low</option>
-                      <option selected>Medium</option>
-                      <option>High</option>
-                      <option>Custom</option>
-                    </select>
-                  </Box>
-                </Flex>
                 <Box className="w-full">
-                  <Text size="sm" className="text-gray-700 font-medium mb-2">Trading / brand names</Text>
-                  <input
-                    type="text"
-                    defaultValue="SwiftSupply (customer-facing brand)"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
+                  <Text size="sm" className="text-gray-700 font-medium mb-2">Regulatory / governing bodies (if relevant)</Text>
+                  <Box className="relative">
+                    <Box className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent min-h-[42px] flex flex-wrap items-center gap-2 cursor-pointer" onClick={() => setShowRegulatoryDropdown(!showRegulatoryDropdown)}>
+                      {selectedRegulatoryBodies.length === 0 ? (
+                        <Text size="sm" className="text-gray-500">Select regulatory bodies...</Text>
+                      ) : (
+                        selectedRegulatoryBodies.map((body) => (
+                          <Box key={body} className="inline-flex items-center px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">
+                            {body}
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedRegulatoryBodies(selectedRegulatoryBodies.filter(b => b !== body));
+                              }}
+                              className="ml-1 text-purple-600 hover:text-purple-800"
+                            >
+                              ×
+                            </button>
+                          </Box>
+                        ))
+                      )}
+                      <Box className="ml-auto">
+                        <ChevronDown className="w-4 h-4 text-gray-400" />
+                      </Box>
+                    </Box>
+                    {showRegulatoryDropdown && (
+                      <Box className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-y-auto">
+                        {regulatoryBodies.map((body) => (
+                          <Box
+                            key={body}
+                            className="px-3 py-2 hover:bg-gray-50 cursor-pointer flex items-center"
+                            onClick={() => {
+                              if (selectedRegulatoryBodies.includes(body)) {
+                                setSelectedRegulatoryBodies(selectedRegulatoryBodies.filter(b => b !== body));
+                              } else {
+                                setSelectedRegulatoryBodies([...selectedRegulatoryBodies, body]);
+                              }
+                            }}
+                          >
+                            <input
+                              type="checkbox"
+                              checked={selectedRegulatoryBodies.includes(body)}
+                              onChange={() => {}}
+                              className="mr-2"
+                            />
+                            <Text size="sm">{body}</Text>
+                          </Box>
+                        ))}
+                      </Box>
+                    )}
+                  </Box>
+                </Box>
+                <Box className="w-full">
+                  <Text size="sm" className="text-gray-700 font-medium mb-2">Risk appetite</Text>
+                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    <option>Low</option>
+                    <option selected>Medium</option>
+                    <option>High</option>
+                    <option>Custom</option>
+                  </select>
                 </Box>
               </VStack>
             </Box>
@@ -439,10 +499,9 @@ export default function Settings() {
                     </select>
                   </Box>
                   <Box className="flex-1">
-                    <Text size="sm" className="text-gray-700 font-medium mb-2">Preferred contract language</Text>
+                    <Text size="sm" className="text-gray-700 font-medium mb-2">Preferred contract language(s)</Text>
                     <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                      <option selected>English (with German translation on request)</option>
-                      <option>English</option>
+                      <option selected>English</option>
                       <option>German</option>
                       <option>French</option>
                       <option>Spanish</option>
@@ -455,30 +514,19 @@ export default function Settings() {
                 </Flex>
                 <Box className="w-full">
                   <Text size="sm" className="text-gray-700 font-medium mb-2">Standard contract length / renewal approach</Text>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                    <option selected>2-year fixed term, auto-renewing annually thereafter</option>
-                    <option>1-year fixed term, auto-renewing annually</option>
-                    <option>3-year fixed term, auto-renewing annually</option>
-                    <option>Monthly rolling contract</option>
-                    <option>Quarterly rolling contract</option>
-                    <option>Annual rolling contract</option>
-                    <option>Fixed term, no auto-renewal</option>
-                    <option>Custom arrangement</option>
-                  </select>
+                  <input
+                    type="text"
+                    defaultValue="2-year fixed term, auto-renewing annually thereafter"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
                 </Box>
                 <Box className="w-full">
                   <Text size="sm" className="text-gray-700 font-medium mb-2">Signature authority format</Text>
-                  <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-                    <option selected>Two directors or one director + company secretary</option>
-                    <option>Single director signature</option>
-                    <option>Two directors required</option>
-                    <option>Director + company secretary</option>
-                    <option>CEO signature only</option>
-                    <option>CFO signature only</option>
-                    <option>Legal counsel approval required</option>
-                    <option>Board resolution required</option>
-                    <option>Custom authority structure</option>
-                  </select>
+                  <input
+                    type="text"
+                    defaultValue="Two directors or one director + company secretary"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
                 </Box>
               </VStack>
             </Box>

@@ -22,7 +22,8 @@ import {
   BookOpen,
   Layout,
   Settings,
-  Search as SearchIcon
+  Search as SearchIcon,
+  Pencil
 } from 'lucide-react';
 import {
   Box,
@@ -379,13 +380,22 @@ export default function Memory() {
                           Business Profile
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -405,13 +415,22 @@ export default function Memory() {
                           Company Registration.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -441,13 +460,22 @@ export default function Memory() {
                           </Button>
                         </Flex>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -467,13 +495,22 @@ export default function Memory() {
                           Business Profile
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -493,13 +530,22 @@ export default function Memory() {
                           Company Registration.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -519,13 +565,22 @@ export default function Memory() {
                           Business Profile
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -545,13 +600,22 @@ export default function Memory() {
                           Business Profile
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -571,13 +635,22 @@ export default function Memory() {
                           Compliance Guide.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -597,13 +670,22 @@ export default function Memory() {
                           Business Profile
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -623,13 +705,22 @@ export default function Memory() {
                           Contract Template
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -649,13 +740,22 @@ export default function Memory() {
                           Contract Template
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -675,13 +775,22 @@ export default function Memory() {
                           Legal Terms.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -701,13 +810,22 @@ export default function Memory() {
                           Corporate Structure.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -727,13 +845,22 @@ export default function Memory() {
                           Website Template
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -753,13 +880,22 @@ export default function Memory() {
                           Privacy Policy v2.1.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -779,13 +915,22 @@ export default function Memory() {
                           Customer Success Playbook
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -823,13 +968,22 @@ export default function Memory() {
                           </Button>
                         </Flex>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
                       </VStack>
@@ -957,13 +1111,22 @@ export default function Memory() {
                           Communication Preferences
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -983,13 +1146,22 @@ export default function Memory() {
                           User Manual.pdf
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1009,13 +1181,22 @@ export default function Memory() {
                           Communication Preferences
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1035,13 +1216,22 @@ export default function Memory() {
                           Learning Preferences
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1061,13 +1251,22 @@ export default function Memory() {
                           Learning Preferences
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1087,13 +1286,22 @@ export default function Memory() {
                           User Preferences
                         </Button>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1104,13 +1312,22 @@ export default function Memory() {
                         <Text size="md" className="text-gray-900 mb-1">Prefers email summaries of important decisions and action items.</Text>
                         <Text size="sm" className="text-gray-500">Added: 2024-01-06 • Last used: 2024-01-11</Text>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
 
@@ -1140,13 +1357,22 @@ export default function Memory() {
                           </Button>
                         </Flex>
                       </Box>
-                      <Button
-                        variant="light"
-                        size="sm"
-                        className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
-                      >
-                        <Trash2 className="w-4 h-4" />
-                      </Button>
+                      <Flex className="space-x-1">
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-blue-600 hover:bg-blue-50"
+                        >
+                          <Pencil className="w-4 h-4" />
+                        </Button>
+                        <Button
+                          variant="light"
+                          size="sm"
+                          className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </Button>
+                      </Flex>
                     </Flex>
                   </Box>
                       </VStack>

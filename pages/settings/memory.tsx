@@ -208,20 +208,101 @@ export default function Memory() {
                           <ChevronDown className="w-4 h-4" />
                         </Button>
                       </PopoverTrigger>
-                      <PopoverContent className="w-80 p-0">
+                      <PopoverContent className="w-96 p-0">
                         <Box className="bg-white rounded-lg shadow-lg">
-                          <Box className="p-4">
-                            <Text className="text-gray-900 font-medium mb-3">Add a collaborator:</Text>
-                            <Flex className="items-center">
-                              <Box className="flex items-center space-x-2 px-3 py-2 border-2 border-purple-200 rounded-full bg-purple-50">
-                                <Box className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                                  <Text className="text-white font-semibold text-sm">J</Text>
-                                </Box>
-                                <Box className="w-6 h-6 bg-purple-200 rounded-full flex items-center justify-center">
-                                  <Plus className="w-3 h-3 text-purple-600" />
-                                </Box>
+                          <Box className="p-4 border-b border-gray-100">
+                            <Text className="text-gray-900 font-medium mb-3">Share with collaborators</Text>
+                            <Text className="text-sm text-gray-500">Manage who can view and edit your memories</Text>
+                          </Box>
+                          
+                          {/* Collaborators List */}
+                          <Box className="max-h-64 overflow-y-auto">
+                            <VStack spacing={0} className="w-full">
+                              {/* Current User */}
+                              <Box className="w-full p-3 border-b border-gray-100 hover:bg-gray-50">
+                                <Flex className="items-center justify-between">
+                                  <Flex className="items-center space-x-3">
+                                    <Box className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                                      <Text className="text-white font-semibold text-sm">J</Text>
+                                    </Box>
+                                    <Box>
+                                      <Text className="text-gray-900 font-medium">John Smith</Text>
+                                      <Text className="text-sm text-gray-500">john@company.com</Text>
+                                    </Box>
+                                  </Flex>
+                                  <Box className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">
+                                    Owner
+                                  </Box>
+                                </Flex>
                               </Box>
-                            </Flex>
+
+                              {/* Collaborator 1 */}
+                              <Box className="w-full p-3 border-b border-gray-100 hover:bg-gray-50">
+                                <Flex className="items-center justify-between">
+                                  <Flex className="items-center space-x-3">
+                                    <Box className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                                      <Text className="text-white font-semibold text-sm">S</Text>
+                                    </Box>
+                                    <Box>
+                                      <Text className="text-gray-900 font-medium">Sarah Johnson</Text>
+                                      <Text className="text-sm text-gray-500">sarah@company.com</Text>
+                                    </Box>
+                                  </Flex>
+                                  <select className="px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-purple-500">
+                                    <option>Editor</option>
+                                    <option>Viewer</option>
+                                  </select>
+                                </Flex>
+                              </Box>
+
+                              {/* Collaborator 2 */}
+                              <Box className="w-full p-3 border-b border-gray-100 hover:bg-gray-50">
+                                <Flex className="items-center justify-between">
+                                  <Flex className="items-center space-x-3">
+                                    <Box className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+                                      <Text className="text-white font-semibold text-sm">M</Text>
+                                    </Box>
+                                    <Box>
+                                      <Text className="text-gray-900 font-medium">Mike Chen</Text>
+                                      <Text className="text-sm text-gray-500">mike@company.com</Text>
+                                    </Box>
+                                  </Flex>
+                                  <select className="px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-purple-500">
+                                    <option>Viewer</option>
+                                    <option>Editor</option>
+                                  </select>
+                                </Flex>
+                              </Box>
+
+                              {/* Collaborator 3 */}
+                              <Box className="w-full p-3 border-b border-gray-100 hover:bg-gray-50">
+                                <Flex className="items-center justify-between">
+                                  <Flex className="items-center space-x-3">
+                                    <Box className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center">
+                                      <Text className="text-white font-semibold text-sm">A</Text>
+                                    </Box>
+                                    <Box>
+                                      <Text className="text-gray-900 font-medium">Alex Rodriguez</Text>
+                                      <Text className="text-sm text-gray-500">alex@company.com</Text>
+                                    </Box>
+                                  </Flex>
+                                  <select className="px-2 py-1 text-xs border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-purple-500">
+                                    <option>Editor</option>
+                                    <option>Viewer</option>
+                                  </select>
+                                </Flex>
+                              </Box>
+
+                              {/* Add New Collaborator */}
+                              <Box className="w-full p-3 hover:bg-gray-50">
+                                <Flex className="items-center space-x-3">
+                                  <Box className="w-8 h-8 border-2 border-dashed border-gray-300 rounded-full flex items-center justify-center">
+                                    <Plus className="w-4 h-4 text-gray-400" />
+                                  </Box>
+                                  <Text className="text-gray-500 font-medium">Add collaborator</Text>
+                                </Flex>
+                              </Box>
+                            </VStack>
                           </Box>
                         </Box>
                       </PopoverContent>
